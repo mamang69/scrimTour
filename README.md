@@ -73,7 +73,7 @@ Pre
 
 HOW TO SETUP 
 
-1. Run composer global require laravel/installer
+1. composer global require laravel/installer
 2. cd example-app
 4. npm install && npm run build
 5. composer run dev
