@@ -1,3 +1,4 @@
+console.log("berhasil")
 function toggleDropdown() {
     const dropdown = document.getElementById("dropdownMenu");
 
@@ -23,3 +24,4 @@ function toggleDropdown() {
         );
     }
 }
+
