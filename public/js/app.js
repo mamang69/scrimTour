@@ -1,4 +1,5 @@
 
+console.log("berhasil");
 function toggleDropdown() {
   var dropdown = document.getElementById("dropdownMenu");
 
