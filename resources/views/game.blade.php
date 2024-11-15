@@ -14,41 +14,61 @@
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <div class="bg-gray-100">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-                    <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+                    <h3><span><a href="/">Beranda</a></span> > Game</h3>
+                    <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-10">
                         <h2 class="text-2xl font-bold text-gray-900">Daftar Game</h2>
-
-                        <div class="mt-6 space-y-12 lg:grid lg:grid-rows-3 lg:grid-flow-col lg:gap-y-4 lg:space-y-4">
-                            <div class="lg:row-span-3">
-                                <div
-                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                                    <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-01.jpg"
-                                        alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                                        class="size-full object-cover object-center">
-                                </div>
-                                
+                        
+                        <div class="mt-6 grid grid-rows-6 grid-cols-8 gap-4">
+                          <div class="row-span-6 col-span-2 bg-gray-500 rounded-lg p-10 drop-shadow-lg">
+                            <div class="font-semibold text-lg">
+                              Filter 
                             </div>
-                            <div class="lg:col-span-2">
-                                <div
-                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                                    <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-02.jpg"
-                                        alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
-                                        class="size-full object-cover object-center">
-                                </div>
+                          </div>
+                          <div class="col-span-6 bg-gray-500 rounded-lg p-10 drop-shadow-lg">
+                            <div class="font-semibold text-lg">
+                              Search 
                             </div>
-                            <div class="lg:row-span-2 lg:col-span-2">
-                                <div
-                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                                    <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg"
-                                        alt="Collection of four insulated travel bottles on wooden shelf."
-                                        class="size-full object-cover object-center">
-                                </div>       
+                          </div>
+                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                            <div class="font-semibold text-lg">
+                              Game 
                             </div>
+                          </div>
+                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                            <div class="font-semibold text-lg">
+                              Game 
+                            </div>
+                          </div>
+                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                            <div class="font-semibold text-lg">
+                              Game 
+                            </div>
+                          </div>
+                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                            <div class="font-semibold text-lg">
+                              Game 
+                            </div>
+                          </div>
+                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                            <div class="font-semibold text-lg">
+                              Game 
+                            </div>
+                          </div>
+                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                            <div class="font-semibold text-lg">
+                              Game 
+                            </div>
+                          </div>
+                          </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+            {{-- <div class=" bg-white rounded-lg p-10 drop-shadow-lg">
+              <div class="font-semibold text-lg">
+                Game 
+              </div>
+            </div> --}}
         </div>
     </main>
 </div>
