@@ -1,4 +1,7 @@
-
+/******/ (() => { // webpackBootstrap
+/*!*****************************!*\
+  !*** ./resources/js/app.js ***!
+  \*****************************/
 console.log("berhasil");
 function toggleDropdown() {
   var dropdown = document.getElementById("dropdownMenu");
@@ -15,3 +18,5 @@ function toggleDropdown() {
     dropdown.classList.add("opacity-0", "scale-95", "ease-in", "duration-75");
   }
 }
+/******/ })()
+;
