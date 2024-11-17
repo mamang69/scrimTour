@@ -23,6 +23,7 @@
         "test": "tests"
     },
     "dependencies": {
+        "@tailwindcss/forms": "^0.5.9",
         "asynckit": "^0.4.0",
         "combined-stream": "^1.0.8",
         "delayed-stream": "^1.0.0",
