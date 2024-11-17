@@ -25,3 +25,10 @@ Route::get('/article', function () {
 Route::get('/detailArticle', function () {
     return view('detailArticle');
 });
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
