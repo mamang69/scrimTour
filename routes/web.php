@@ -22,13 +22,12 @@ Route::get('/game', function () {
 Route::get('/article', function () {
     return view('article');
 });
-Route::get('/detailArticle', function () {
+Route::get('/detail-article', function () {
     return view('detailArticle');
 });
 Route::get('/login', function () {
     return view('login');
 });
-
 Route::get('/register', function () {
     return view('register');
 });
