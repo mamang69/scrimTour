@@ -1,7 +1,20 @@
-import './bootstrap';
+function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownMenu");
 
-import Alpine from 'alpinejs';
+    // Toggle class "hidden" untuk show/hide dropdown
+    dropdown.classList.toggle("hidden");
 
-window.Alpine = Alpine;
+    // Menambahkan animasi saat show/hide
+    if (!dropdown.classList.contains("hidden")) {
+        dropdown.classList.remove("opacity-0", "scale-95");
+        dropdown.classList.add("opacity-100", "scale-100", "ease-out", "duration-100");
+    } else {
+        dropdown.classList.remove("opacity-100", "scale-100");
+        dropdown.classList.add("opacity-0", "scale-95", "ease-in", "duration-75");
+    }
+}
 
-Alpine.start();
+// Membuat fungsi global
+window.toggleDropdown = toggleDropdown;
+
+
