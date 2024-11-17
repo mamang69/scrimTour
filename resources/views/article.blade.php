@@ -15,7 +15,7 @@
                         
                         <div class="mt-6 grid grid-cols-3 gap-4">
                           <div class="group relative">
-                            <h1 class="mt-6 text-2xl font-bold text-gray-500 line-clamp-2">
+                            <h1 class="mt-6 text-2xl font-bold text-gray-500 line-clamp-1">
                               Update Patch 3.1 Valorant
                             </h1>
                             <div
@@ -24,17 +24,15 @@
                                     alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
                                     class="size-full object-cover object-center">
                             </div>
-                            <h3 class="mt-6 text-sm text-gray-500">
-                                
-                                    Pada Update Versi 5.2 "Tapestry of Spirit and Flame" akan menghadirkan 2 suku baru yaitu Flower-Feather Clan and Masters of the Night-Wind dengan pengalaman baru terbang dan bertempur di udara!!
-                                
+                            <h3 class="mt-6 text-sm text-gray-500 line-clamp-5">
+                                Pada Update Versi 5.2 "Tapestry of Spirit and Flame", dua suku baru akan hadir dalam permainan. Suku pertama adalah Klan Bulu-Bunga, yang memiliki kemampuan unik dalam pertempuran di udara. Suku kedua, Masters of the Night-Wind, juga menawarkan pengalaman baru dalam pertempuran terbang. Pemain akan merasakan pengalaman terbang yang belum pernah ada sebelumnya. Kedua suku ini akan membuka berbagai peluang baru dalam strategi permainan. Selain itu, kedua suku ini juga memiliki kemampuan khusus yang dapat mempengaruhi keseluruhan pertempuran. Dengan keahlian terbang, mereka dapat menghindari serangan musuh dan menyerang dari ketinggian. Update ini bertujuan untuk menambah kedalaman dan variasi dalam gameplay, memberi pemain lebih banyak opsi dalam memilih gaya bertarung. Fitur baru ini juga diharapkan bisa memberikan tantangan yang lebih seru
                             </h3>
                             <div class="bg-gray-300 px-4 py-2 w-max max-w-xs text-left ml-0 mt-2">
                               <a href="/detailArticle"><p class="text-base font-semibold text-gray-900">Read More...</p></a>
                             </div>
                           </div>
                           <div class="group relative">
-                            <h1 class="mt-6 text-2xl font-bold text-gray-500">
+                            <h1 class="mt-6 text-2xl font-bold text-gray-500 line-clamp-1">
                               Update Patch 3.9 Mobile Legend Bang Bang
                             </h1>
                               <div
@@ -43,16 +41,15 @@
                                       alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
                                       class="size-full object-cover object-center">
                               </div>
-                              <h3 class="mt-6 text-sm text-gray-500">
-                                      Pada Update Versi 5.2 "Tapestry of Spirit and Flame" akan menghadirkan 2 suku baru yaitu Flower-Feather Clan and Masters of the Night-Wind dengan pengalaman baru terbang dan bertempur di udara!!
-                                 
+                              <h3 class="mt-6 text-sm text-gray-500 line-clamp-5">
+                                Pada Update Versi 5.2 "Tapestry of Spirit and Flame", dua suku baru akan hadir dalam permainan. Suku pertama adalah Klan Bulu-Bunga, yang memiliki kemampuan unik dalam pertempuran di udara. Suku kedua, Masters of the Night-Wind, juga menawarkan pengalaman baru dalam pertempuran terbang. Pemain akan merasakan pengalaman terbang yang belum pernah ada sebelumnya. Kedua suku ini akan membuka berbagai peluang baru dalam strategi permainan. Selain itu, kedua suku ini juga memiliki kemampuan khusus yang dapat mempengaruhi keseluruhan pertempuran. Dengan keahlian terbang, mereka dapat menghindari serangan musuh dan menyerang dari ketinggian. Update ini bertujuan untuk menambah kedalaman dan variasi dalam gameplay, memberi pemain lebih banyak opsi dalam memilih gaya bertarung. Fitur baru ini juga diharapkan bisa memberikan tantangan yang lebih seru
                               </h3>
                               <div class="bg-gray-300 px-4 py-2 w-max max-w-xs text-left ml-0 mt-2">
                                 <a href="/detailArticle"><p class="text-base font-semibold text-gray-900">Read More...</p></a>
                               </div>
                           </div>
                           <div class="group relative">
-                              <h1 class="mt-6 text-2xl font-bold text-gray-500">
+                              <h1 class="mt-6 text-2xl font-bold text-gray-500 line-clamp-1">
                                 Update Patch 5.3 Clash Royale
                               <div
                                   class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:mt-4 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
@@ -60,9 +57,8 @@
                                       alt="Collection of four insulated travel bottles on wooden shelf."
                                       class="size-full object-cover object-center">
                               </div>
-                              <h3 class="mt-6 text-sm text-gray-500">
-                                      Pada Update Versi 5.2 "Tapestry of Spirit and Flame" akan menghadirkan 2 suku baru yaitu Flower-Feather Clan and Masters of the Night-Wind dengan pengalaman baru terbang dan bertempur di udara!!
-
+                              <h3 class="mt-6 text-sm text-gray-500 line-clamp-5">
+                                Pada Update Versi 5.2 "Tapestry of Spirit and Flame", dua suku baru akan hadir dalam permainan. Suku pertama adalah Klan Bulu-Bunga, yang memiliki kemampuan unik dalam pertempuran di udara. Suku kedua, Masters of the Night-Wind, juga menawarkan pengalaman baru dalam pertempuran terbang. Pemain akan merasakan pengalaman terbang yang belum pernah ada sebelumnya. Kedua suku ini akan membuka berbagai peluang baru dalam strategi permainan. Selain itu, kedua suku ini juga memiliki kemampuan khusus yang dapat mempengaruhi keseluruhan pertempuran. Dengan keahlian terbang, mereka dapat menghindari serangan musuh dan menyerang dari ketinggian. Update ini bertujuan untuk menambah kedalaman dan variasi dalam gameplay, memberi pemain lebih banyak opsi dalam memilih gaya bertarung. Fitur baru ini juga diharapkan bisa memberikan tantangan yang lebih seru
                               </h3>
                               <div class="bg-gray-300 px-4 py-2 w-max max-w-xs text-left ml-0 mt-2">
                                 <a href="/detailArticle"><p class="text-base font-semibold text-gray-900">Read More...</p></a>
