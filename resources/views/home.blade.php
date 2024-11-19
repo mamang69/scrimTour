@@ -77,7 +77,7 @@
                         <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
                             <div class="group relative">
                                 <div
-                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    class="relative mx-auto h-48 sm:w-full w-2/3 overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                     <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-01.jpg"
                                         alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
                                         class="size-full object-cover object-center">
@@ -92,7 +92,7 @@
                             </div>
                             <div class="group relative">
                                 <div
-                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    class="relative mx-auto h-48 sm:w-full w-2/3 overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                     <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-02.jpg"
                                         alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
                                         class="size-full object-cover object-center">
@@ -107,7 +107,7 @@
                             </div>
                             <div class="group relative">
                                 <div
-                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    class="relative mx-auto h-48 sm:w-full w-2/3 overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                     <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg"
                                         alt="Collection of four insulated travel bottles on wooden shelf."
                                         class="size-full object-cover object-center">

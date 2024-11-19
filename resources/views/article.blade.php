@@ -14,13 +14,13 @@
                         <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-10">
                             <h2 class="text-2xl font-bold text-gray-900">Article</h2>
 
-                            <div class="mt-6 grid grid-cols-3 gap-4">
+                            <div class="mt-6 lg:grid lg:grid-cols-3 lg:gap-4">
                                 <div class="group relative">
                                     <h1 class="mt-6 text-2xl font-bold text-gray-500 line-clamp-1">
                                         Update Patch 3.1 Valorant
                                     </h1>
                                     <div
-                                        class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:mt-4 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                        class="relative lg:mt-4 mx-auto h-48 sm:w-full w-2/3 overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                         <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-01.jpg"
                                             alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
                                             class="size-full object-cover object-center">
@@ -49,7 +49,8 @@
                                         Update Patch 3.9 Mobile Legend Bang Bang
                                     </h1>
                                     <div
-                                        class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:mt-4 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    
+                                        class="relative lg:mt-4 mx-auto h-48 sm:w-full w-2/3 overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                         <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-02.jpg"
                                             alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
                                             class="size-full object-cover object-center">
@@ -77,7 +78,7 @@
                                     <h1 class="mt-6 text-2xl font-bold text-gray-500 line-clamp-1">
                                         Update Patch 5.3 Clash Royale
                                         <div
-                                            class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:mt-4 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                            class="relative lg:mt-4 mx-auto h-48 sm:w-full w-2/3 overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
                                             <img src="https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg"
                                                 alt="Collection of four insulated travel bottles on wooden shelf."
                                                 class="size-full object-cover object-center">
@@ -106,7 +107,7 @@
                     </div>
                     <div class="mt-8 text-right">
                         <nav aria-label="Page navigation example">
-                            <ul class="flex items-center justify-end space-x-2">
+                            <ul class="flex items-center sm:justify-end justify-center space-x-2">
                                 <li>
                                     <a href="#"
                                         class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">
