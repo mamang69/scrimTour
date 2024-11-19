@@ -14,8 +14,8 @@
                     <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-10">
                         <h2 class="text-2xl font-bold text-gray-900">Daftar Game</h2>
                         
-                        <div class="mt-6 lg:grid lg:grid-rows-6 lg:grid-cols-8 gap-4">
-                          <div class="row-span-6 col-span-2 bg-white rounded-xl p-10 drop-shadow-lg">
+                        <div class="mt-6 grid grid-cols-2 lg:grid lg:grid-rows-6 lg:grid-cols-8 gap-4">
+                          <div class="lg:row-span-6 lg:col-span-2 col-span-2 bg-white rounded-xl p-10 drop-shadow-lg">
                             <div class="font-semibold text-lg">
                               Filter
                             </div>
@@ -80,37 +80,37 @@
                             </div>
                           </div>
                           
-                          <div class="col-span-6 bg-gray-500 rounded-lg p-10 drop-shadow-lg">
+                          <div class="lg:col-span-6 col-span-2 lg:mt-0 mt-6 bg-gray-500 rounded-lg p-10 drop-shadow-lg">
                             <div class="font-semibold text-lg">
                               Search 
                             </div>
                           </div>
-                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                          <div class="lg:col-span-2 lg:row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
                             <div class="font-semibold text-lg">
                               Game 
                             </div>
                           </div>
-                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                          <div class="lg:col-span-2 lg:row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
                             <div class="font-semibold text-lg">
                               Game 
                             </div>
                           </div>
-                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                          <div class="lg:col-span-2 lg:row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
                             <div class="font-semibold text-lg">
                               Game 
                             </div>
                           </div>
-                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                          <div class="lg:col-span-2 lg:row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
                             <div class="font-semibold text-lg">
                               Game 
                             </div>
                           </div>
-                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                          <div class="lg:col-span-2 lg:row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
                             <div class="font-semibold text-lg">
                               Game 
                             </div>
                           </div>
-                          <div class="col-span-2 row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
+                          <div class="lg:col-span-2 lg:row-span-2 bg-white rounded-lg p-10 drop-shadow-lg">
                             <div class="font-semibold text-lg">
                               Game 
                             </div>
