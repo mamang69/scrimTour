@@ -3,7 +3,7 @@
       <!-- Baris pertama: Jadwal Game Article -->
           <div class=" text-center">
             <h3 class="text-lg font-semibold">
-              <a href="" class="mx-2">Jadwal</a>
+              <a href="/jadwal" class="mx-2">Jadwal</a>
               <a href="/game" class="mx-2">Game</a>
               <a href="/article" class="mx-2">Article</a>
             </h3>
