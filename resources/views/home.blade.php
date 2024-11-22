@@ -5,12 +5,16 @@
 @section('container')
 @section('heroimage')
 <div class="min-h-full">
-    <header class="bg-white shadow">
-        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-        </div>
-    </header>
+
     <main>
+        <div class="h-104  pt-16" style="background-image: url('{{ asset('images/bg_beranda.jpg') }}'); background-size: cover; background-position: center;">
+            <h1 class="mx-auto px-4 py-6 sm:px-6 lg:px-">
+                <span class="text-white text-6xl font-bold">KABAR </span>
+                <span class="text-outline-red text-6xl font-bold">GAMERS</span>
+            </h1>
+        </div>
+        
+        
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <div class="bg-gray-100">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
