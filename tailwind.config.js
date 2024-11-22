@@ -6,7 +6,11 @@ module.exports = {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            spacing: {
+                104: "26rem", // Tambahkan ukuran baru 104 untuk 26 rem
+            },
+        },
         container: {
             center: true, // Memastikan container selalu di tengah
             padding: {

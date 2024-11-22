@@ -10,4 +10,8 @@
         overflow: hidden;
         text-overflow: ellipsis; /* This adds the ellipsis */
     }
+    .text-outline-red {
+        color: transparent; /* Membuat isi teks transparan sehingga hanya outline terlihat */
+        -webkit-text-stroke: 2px red; /* Outline teks berwarna merah */
+    }
 }
