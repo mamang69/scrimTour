@@ -24,38 +24,53 @@ function toggleDropdown() {
     }
 }
 
-// Membuat fungsi global
-window.toggleDropdown = toggleDropdown;
-//login
-document
-    .getElementById("loginForm")
-    .addEventListener("submit", async function (event) {
-        event.preventDefault();
+    document.addEventListener('DOMContentLoaded', function () {
+        const loginForm = document.getElementById("loginForm");
+        if (loginForm) {
+            loginForm.addEventListener("submit", async function (event) {
+                event.preventDefault();
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
 
-        try {
-            const response = await fetch("http://127.0.0.1:8000/api/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ email, password }),
+                try {
+                    const response = await fetch("http://127.0.0.1:8000/api/login", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ email, password }),
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        document.getElementById("responseMessage").textContent =
+                            "Login berhasil!";
+                        console.log("Token:", data.message.token);
+                    } else {
+                        document.getElementById("responseMessage").textContent =
+                            data.message || "Login gagal.";
+                    }
+                } catch (error) {
+                    document.getElementById("responseMessage").textContent =
+                        "Terjadi kesalahan: " + error.message;
+                }
             });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                document.getElementById("responseMessage").textContent =
-                    "Login berhasil!";
-                console.log("Token:", data.message.token);
-            } else {
-                document.getElementById("responseMessage").textContent =
-                    data.message || "Login gagal.";
-            }
-        } catch (error) {
-            document.getElementById("responseMessage").textContent =
-                "Terjadi kesalahan: " + error.message;
         }
     });
+
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     window.addEventListener('scroll', function() {
+    //         var navbar = document.getElementById('navbar');
+    //         if (window.scrollY > 0) {
+    //             navbar.classList.add('opacity-50');
+    //             navbar.classList.remove('opacity-100');
+    //         } else {
+    //             navbar.classList.remove('opacity-50');
+    //             navbar.classList.add('opacity-100');
+    //         }
+    //     });
+    // });
+    

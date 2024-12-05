@@ -12,32 +12,41 @@ class ArticleController extends Controller
     // Menampilkan semua data article
     public function index()
     {
-        $articles = Article::paginate(6); // Pastikan artikel sudah diambil
-        // Log::info('Fetched articles:', ['articles' => $articles]); // Debug log data
-        // dd($articles);
-        // return response()->json([
-        //     'message' => $articles,
-        // ], 201);
+        $articles = Article::paginate(6);
         return view('articles.article', compact('articles'));
+    }
+    public function indexApi()
+    {
+        $articles = Article::all(); // Ambil semua artikel
+        return response()->json([
+            'success' => true,
+            'data' => $articles
+        ]);
     }
 
 
     public function show($id)
     {
-        try {
-            // Cari artikel berdasarkan ID
-            $article = Article::findOrFail($id); // Mendapatkan artikel berdasarkan id
-
-            // Menggunakan Carbon untuk memformat tanggal tanpa detik
-            $article->tanggal = \Carbon\Carbon::parse($article->tanggal)->format('d/m/Y, H:i'); // Format DD/MM/YYYY, HH:MM
-
-            return view('articles.detailArticle', compact('article'));
-        } catch (\Exception $e) {
-            // Jika artikel tidak ditemukan, kembalikan halaman error atau redirect
-            return abort(404, 'Artikel tidak ditemukan');
-        }
+        $article = Article::findOrFail($id);
+        // $article->tanggal = \Carbon\Carbon::parse($article->tanggal)->format('d/m/Y, H:i');
+        return view('articles.detailArticle', compact('article'));
     }
+    public function showApi($id)
+    {
+        $article = Article::find($id);
 
+        if (!$article) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Article not found'
+            ], 404);
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => $article
+        ]);
+    }
 
     // Menambah data baru ke tabel article
     public function store(Request $request)

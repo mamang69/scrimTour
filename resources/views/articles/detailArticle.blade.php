@@ -17,7 +17,7 @@
                                 {{ $article->judul }}
                             </h1>
                             <h3 class="mt-4 text-sm font-bold text-white line-clamp-2">
-                                {{ \Carbon\Carbon::parse($article->tanggal)->format('d/m/Y, H:i') }} WIB
+                                {{\Carbon\Carbon::parse($article->tanggal)->format('d/m/Y, H:i') }} WIB
                             </h3>
 
                             <!-- Menampilkan gambar artikel (gunakan gambar dinamis jika ada URL gambar di database) -->

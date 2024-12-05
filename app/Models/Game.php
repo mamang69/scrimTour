@@ -10,7 +10,7 @@ class Game extends Model
     use HasFactory;
 
     protected $fillable = ['nama', 'deskripsi', 'genre', 'jenis', 'foto', 'icon'];
-
+    protected $table = 'game';
     public function turnament()
     {
         return $this->hasMany(Turnament::class); // Game memiliki banyak jadwal

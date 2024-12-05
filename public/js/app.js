@@ -26,59 +26,73 @@ function toggleDropdown() {
     dropdown.classList.add("opacity-0", "scale-95", "ease-in", "duration-75");
   }
 }
-
-// Membuat fungsi global
-window.toggleDropdown = toggleDropdown;
-//login
-document.getElementById("loginForm").addEventListener("submit", /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee(event) {
-    var email, password, response, data;
-    return _regeneratorRuntime().wrap(function _callee$(_context) {
-      while (1) switch (_context.prev = _context.next) {
-        case 0:
-          event.preventDefault();
-          email = document.getElementById("email").value;
-          password = document.getElementById("password").value;
-          _context.prev = 3;
-          _context.next = 6;
-          return fetch("http://127.0.0.1:8000/api/login", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              email: email,
-              password: password
-            })
-          });
-        case 6:
-          response = _context.sent;
-          _context.next = 9;
-          return response.json();
-        case 9:
-          data = _context.sent;
-          if (response.ok) {
-            document.getElementById("responseMessage").textContent = "Login berhasil!";
-            console.log("Token:", data.message.token);
-          } else {
-            document.getElementById("responseMessage").textContent = data.message || "Login gagal.";
+document.addEventListener('DOMContentLoaded', function () {
+  var loginForm = document.getElementById("loginForm");
+  if (loginForm) {
+    loginForm.addEventListener("submit", /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee(event) {
+        var email, password, response, data;
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              event.preventDefault();
+              email = document.getElementById("email").value;
+              password = document.getElementById("password").value;
+              _context.prev = 3;
+              _context.next = 6;
+              return fetch("http://127.0.0.1:8000/api/login", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                  email: email,
+                  password: password
+                })
+              });
+            case 6:
+              response = _context.sent;
+              _context.next = 9;
+              return response.json();
+            case 9:
+              data = _context.sent;
+              if (response.ok) {
+                document.getElementById("responseMessage").textContent = "Login berhasil!";
+                console.log("Token:", data.message.token);
+              } else {
+                document.getElementById("responseMessage").textContent = data.message || "Login gagal.";
+              }
+              _context.next = 16;
+              break;
+            case 13:
+              _context.prev = 13;
+              _context.t0 = _context["catch"](3);
+              document.getElementById("responseMessage").textContent = "Terjadi kesalahan: " + _context.t0.message;
+            case 16:
+            case "end":
+              return _context.stop();
           }
-          _context.next = 16;
-          break;
-        case 13:
-          _context.prev = 13;
-          _context.t0 = _context["catch"](3);
-          document.getElementById("responseMessage").textContent = "Terjadi kesalahan: " + _context.t0.message;
-        case 16:
-        case "end":
-          return _context.stop();
-      }
-    }, _callee, null, [[3, 13]]);
-  }));
-  return function (_x) {
-    return _ref.apply(this, arguments);
-  };
-}());
+        }, _callee, null, [[3, 13]]);
+      }));
+      return function (_x) {
+        return _ref.apply(this, arguments);
+      };
+    }());
+  }
+});
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     window.addEventListener('scroll', function() {
+//         var navbar = document.getElementById('navbar');
+//         if (window.scrollY > 0) {
+//             navbar.classList.add('opacity-50');
+//             navbar.classList.remove('opacity-100');
+//         } else {
+//             navbar.classList.remove('opacity-50');
+//             navbar.classList.add('opacity-100');
+//         }
+//     });
+// });
 
 /***/ }),
 
