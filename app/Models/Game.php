@@ -11,8 +11,8 @@ class Game extends Model
 
     protected $fillable = ['nama', 'deskripsi', 'genre', 'jenis', 'foto', 'icon'];
 
-    public function jadwals()
+    public function turnament()
     {
-        return $this->hasMany(Jadwal::class); // Game memiliki banyak jadwal
+        return $this->hasMany(Turnament::class); // Game memiliki banyak jadwal
     }
 }
