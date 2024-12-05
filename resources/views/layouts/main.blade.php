@@ -14,8 +14,8 @@
     @include('partial.navbar')
 
     @yield('heroimage')
-    <div class="container">
-        @yield('container')
+    <div class="container bg-black">
+        @yield('container bg-black')
     </div>
 
     @include('partial.footer')
