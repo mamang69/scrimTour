@@ -13,13 +13,17 @@
 <body>
     @include('partial.navbar')
 
-    @yield('heroimage')
-    <div class="container bg-black">
-        @yield('container bg-black')
+    <div class="{{request()->is('/')?'':'mt-16'}}"> 
+        @yield('heroimage')
+        <div class="contain">
+            @yield('container')
+        </div>
     </div>
 
     @include('partial.footer')
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}">
+    
+    </script>
 </body>
 
 </html>

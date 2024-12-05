@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-</html>
 @extends('layouts.main')
 @section('container')
 @section('heroimage')
 <div class="min-h-full">
 
     <main>
-        <div class="h-104  pt-16" style="background-image: url('{{ asset('images/bg_beranda.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="h-104 pt-16" style="background-image: url('{{ asset('images/bg_beranda.jpg') }}'); background-size: cover; background-position: center;">
             <h1 class="mx-auto px-4 py-6 sm:px-6 lg:px-">
                 <span class="text-white text-6xl font-bold">KABAR </span>
                 <span class="text-outline-red text-6xl font-bold">GAMERS</span>
             </h1>
         </div>
-        
         
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             <div class="bg-gray-100">

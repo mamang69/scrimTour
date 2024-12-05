@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-</html>
 @extends('layouts.main')
 @section('container')
 @section('heroimage')

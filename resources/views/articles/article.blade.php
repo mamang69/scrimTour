@@ -1,8 +1,7 @@
 @extends('layouts.main')
-
 @section('container')
 @section('heroimage')
-    <div class="min-h-full bg-black">
+    <div class="min-h-ful">
         <main>
             <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-2">
                 <div class="">
