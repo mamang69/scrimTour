@@ -9,5 +9,11 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['judul', 'tanggal', 'foto', 'deskripsi', 'intro',];
+    protected $table = 'article';
+
+    // Kolom yang dapat diisi langsung melalui mass assignment
+    protected $fillable = ['judul', 'tanggal', 'foto', 'deskripsi', 'intro'];
+
+    // Pastikan kolom `tanggal` diperlakukan sebagai instance Carbon
+    protected $dates = ['tanggal'];
 }

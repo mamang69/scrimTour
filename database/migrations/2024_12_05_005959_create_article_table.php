@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('article', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
-            $table->date('tanggal');
+            $table->datetime('tanggal');
             $table->string('foto');
             $table->text('deskripsi');
             $table->text('intro'); // deskripsi singkat pada halaman article

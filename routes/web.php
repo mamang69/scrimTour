@@ -1,17 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Models\Article;
+use App\Http\Controllers\ArticleController;
 
 Route::get('/', function () {
     return view('home');
@@ -22,9 +13,9 @@ Route::get('/jadwal', function () {
 Route::get('/game', function () {
     return view('game');
 });
-Route::get('/article', function () {
-    return view('article');
-});
+Route::get('/article', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/article/{id}', [ArticleController::class, 'show'])->name('articles.show');
+
 Route::get('/detail-article', function () {
     return view('detailArticle');
 });
