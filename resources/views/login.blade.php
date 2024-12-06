@@ -79,25 +79,30 @@
             }),
         });
 
+        // Periksa apakah respons berhasil
+        if (!response.ok) {
+            const data = await response.json();
+            document.getElementById("responseMessage").textContent = data.message || "Login gagal.";
+            return; // Stop eksekusi jika login gagal
+        }
+
         const data = await response.json();
         console.log(data); // Debugging log
 
-        if (response.ok) {
-            document.getElementById("responseMessage").textContent = "Login berhasil!";
-            console.log("Token:", data.token); // Cek token
+        // Jika login berhasil
+        document.getElementById("responseMessage").textContent = "Login berhasil!";
+        console.log("Token:", data.token); // Cek token
 
-            // Simpan token ke localStorage atau sessionStorage untuk digunakan di aplikasi lain
-            localStorage.setItem('auth_token', data.token);
+        // Simpan token ke localStorage atau sessionStorage untuk digunakan di aplikasi lain
+        localStorage.setItem('auth_token', data.token);
 
-            // Arahkan pengguna ke halaman dashboard
-            window.location.href = "/"; // Ganti dengan URL halaman dashboard Anda
-        } else {
-            document.getElementById("responseMessage").textContent = data.message || "Login gagal.";
-        }
+        // Arahkan pengguna ke halaman dashboard
+        window.location.href = "/"; // Ganti dengan URL halaman dashboard Anda
     } catch (error) {
         document.getElementById("responseMessage").textContent = "Terjadi kesalahan: " + error.message;
     }
 });
+
 
     </script>    
 </body>

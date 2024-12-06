@@ -796,18 +796,6 @@ select {
 .top-1\/2 {
   top: 50%;
 }
-.bottom-2 {
-  bottom: 0.5rem;
-}
-.bottom-8 {
-  bottom: 2rem;
-}
-.-bottom-24 {
-  bottom: -6rem;
-}
-.-bottom-52 {
-  bottom: -13rem;
-}
 .z-10 {
   z-index: 10;
 }
@@ -889,20 +877,11 @@ select {
 .mt-6 {
   margin-top: 1.5rem;
 }
-.mt-8 {
-  margin-top: 2rem;
-}
-.mt-36 {
-  margin-top: 9rem;
-}
-.mt-96 {
-  margin-top: 24rem;
-}
 .mt-64 {
   margin-top: 16rem;
 }
-.mt-72 {
-  margin-top: 18rem;
+.mt-8 {
+  margin-top: 2rem;
 }
 .line-clamp-1 {
   overflow: hidden;
@@ -998,15 +977,6 @@ select {
 .h-full {
   height: 100%;
 }
-.h-auto {
-  height: auto;
-}
-.h-4\/5 {
-  height: 80%;
-}
-.h-36 {
-  height: 9rem;
-}
 .min-h-full {
   min-height: 100%;
 }
@@ -1036,12 +1006,6 @@ select {
 }
 .w-full {
   width: 100%;
-}
-.w-24 {
-  width: 6rem;
-}
-.w-36 {
-  width: 9rem;
 }
 .max-w-2xl {
   max-width: 42rem;
@@ -1636,10 +1600,6 @@ input[type="text"]:focus {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
-
-.focus\:outline-8:focus {
-  outline-width: 8px;
 }
 
 .focus\:ring-2:focus {
