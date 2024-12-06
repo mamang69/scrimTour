@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -78,12 +79,15 @@
             const password = document.getElementById("password").value;
             const password_confirmation = document.getElementById("password_confirmation").value;
 
+            // Ambil token CSRF dari cookie
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
             try {
                 const response = await fetch("http://127.0.0.1:8000/api/register", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": csrfToken, // Kirimkan token CSRF di header
                     },
                     body: JSON.stringify({
                         name,
@@ -99,6 +103,7 @@
                     document.getElementById("responseMessage").textContent = data.message || "Terjadi kesalahan pada server.";
                 } else {
                     document.getElementById("responseMessage").textContent = "Registrasi berhasil!";
+                    window.location.href = '/';
                 }
             } catch (error) {
                 console.error('Fetch error:', error); // Menampilkan kesalahan koneksi atau masalah lainnya
