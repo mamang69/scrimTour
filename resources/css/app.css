@@ -10,12 +10,15 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
+
     .text-outline-red {
         color: transparent;
         -webkit-text-stroke: 2px red;
     }
-    
+    .text-outline-red-2 {
+        color: transparent;
+        -webkit-text-stroke: 2px rgba(148, 27, 12, 1);
+    }
     :root {
         --background-color: black;
     }
@@ -25,7 +28,6 @@
     }
 
     input[type="text"]:focus {
-        outline: none !important; 
+        outline: none !important;
     }
 }
-

@@ -9,64 +9,74 @@
     <title>Sign Up</title>
 </head>
 
-<body class="h-full">
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
-            <h2 class="mt-10 text-center text-2xl font-bold tracking-tight text-gray-900">Sign up to create a new account</h2>
-        </div>
+<body class="h-full" style="background-image: url('{{ asset('images/bg_beranda.jpg') }}'); background-size: cover; background-position: center;">
+    <div class="flex min-h-full items-center justify-center px-6 py-12 lg:px-8">
+        <div class="border-4 border-red-600 w-4/5 lg:w-2/5 bg-black bg-opacity-20 p-6 rounded-lg">
+            <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-white">DAFTAR</h2>
+            </div>
 
-        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6" action="/api/register" method="POST" id="registerForm">
-                @csrf
-                <div>
-                    <label for="name" class="block text-sm font-medium text-gray-900">Full Name</label>
-                    <div class="mt-2">
-                        <input id="name" name="name" type="text" required
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                <form class="space-y-6" action="/api/register" method="POST" id="registerForm">
+                    @csrf
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-white">Nama Lengkap</label>
+                        <div class="mt-2">
+                            <input id="name" name="name" type="text" required
+                                class="block w-full rounded-md bg-gray-400 bg-opacity-20 border-gray-500 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                        </div>
                     </div>
-                </div>
 
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-900">Email address</label>
-                    <div class="mt-2">
-                        <input id="email" name="email" type="email" required
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-white">Email</label>
+                        <div class="mt-2">
+                            <input id="email" name="email" type="email" required
+                                class="block w-full rounded-md bg-gray-400 bg-opacity-20 border-gray-300 py-1.5  text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                        </div>
                     </div>
-                </div>
 
-                <div>
-                    <div class="flex items-center justify-between">
-                        <label for="password" class="block text-sm font-medium text-gray-900">Password</label>
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label for="password" class="block text-sm font-medium text-white">Password</label>
+                        </div>
+                        <div class="mt-2">
+                            <input id="password" name="password" type="password" required
+                                class="block w-full rounded-md bg-gray-400 bg-opacity-20 border-gray-300 py-1.5  text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                        </div>
                     </div>
-                    <div class="mt-2">
-                        <input id="password" name="password" type="password" required
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-                    </div>
-                </div>
 
-                <div>
-                    <div class="flex items-center justify-between">
-                        <label for="password_confirmation" class="block text-sm font-medium text-gray-900">Confirm Password</label>
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label for="password_confirmation"
+                                class="block text-sm font-medium text-white">Konfirmasi Password</label>
+                        </div>
+                        <div class="mt-2">
+                            <input id="password_confirmation" name="password_confirmation" type="password" required
+                                class="block w-full rounded-md bg-gray-400 bg-opacity-20 border-gray-300 py-1.5  text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                        </div>
                     </div>
-                    <div class="mt-2">
-                        <input id="password_confirmation" name="password_confirmation" type="password" required
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-                    </div>
-                </div>
 
-                <div>
-                    <button type="submit"
-                        class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                        Sign Up
-                    </button>
+                    <div class="flex justify-center">
+                        <button type="submit"
+                            class="flex w-2/5 justify-center border-2 border-white rounded-md bg-gradient-to-r from-red-500 to-black px-3 py-1.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ">
+                            DAFTAR
+                        </button>
+                    </div>
+                </form>
+                <div id="responseMessage" class="mt-4 text-center text-sm text-red-600"></div>
+                <p class="mt-6 text-center text-sm text-gray-100">
+                    Sudah Punya Akun?
+                </p>
+                <div class="flex justify-center items-center mt-6">
+                    <a href="/login" class="text-center font-bold text-lg text-white ">
+                        MASUK
+                    </a>
                 </div>
-            </form>
-            <div id="responseMessage" class="mt-4 text-center text-sm text-red-600"></div>
-            <p class="mt-10 text-center text-sm text-gray-500">
-                Already have an account?
-                <a href="/login" class="font-semibold text-indigo-600 hover:text-indigo-500">Log in now</a>
-            </p>
+                
+                
+                
+                
+            </div>
         </div>
     </div>
 
@@ -103,7 +113,8 @@
                     document.getElementById("responseMessage").textContent = data.message || "Terjadi kesalahan pada server.";
                 } else {
                     document.getElementById("responseMessage").textContent = "Registrasi berhasil!";
-                    window.location.href = '/';
+                    // localStorage.setItem('auth_token', data.token);
+                    window.location.href = '/login';
                 }
             } catch (error) {
                 console.error('Fetch error:', error); // Menampilkan kesalahan koneksi atau masalah lainnya

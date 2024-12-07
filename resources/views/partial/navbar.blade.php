@@ -3,64 +3,79 @@
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
                 <div class="shrink-0">
-                    <h1 class="text-3xl font-bold"><span class="text-red-700">Scrim</span><span class="text-white">Tour</span></h1>
+                    <h1 class="text-3xl font-bold">
+                        <span class="text-red-700">Scrim</span><span class="text-white">Tour</span>
+                    </h1>
                 </div>
             </div>
-            <div class="ml-auto hidden md:block">
+            <div class="hidden md:block ml-auto">
                 <div class="ml-10 flex items-baseline space-x-4">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="/" class="rounded-md px-3 py-2 text-xl font-medium text-red-700 hover:bg-red-700 hover:text-black">Beranda</a>
-                    <a href="/jadwal" class="rounded-md px-3 py-2 text-xl font-medium text-red-700 hover:bg-red-700 hover:text-black">Jadwal</a>
-                    <a href="/game" class="rounded-md px-3 py-2 text-xl font-medium text-red-700 hover:bg-red-700 hover:text-black">Game</a>
-                    <a href="/article" class="rounded-md px-3 py-2 text-xl font-medium text-red-700 hover:bg-red-700 hover:text-black">Artikel</a>
+                    <a href="/" class="rounded-md px-3 py-2 text-xl font-extrabold text-red-700 hover:bg-red-700 hover:text-black">Beranda</a>
+                    <a href="/jadwal" class="rounded-md px-3 py-2 text-xl font-extrabold text-red-700 hover:bg-red-700 hover:text-black">Jadwal</a>
+                    <a href="/game" class="rounded-md px-3 py-2 text-xl font-extrabold text-red-700 hover:bg-red-700 hover:text-black">Game</a>
+                    <a href="/article" class="rounded-md px-3 py-2 text-xl font-extrabold text-red-700 hover:bg-red-700 hover:text-black">Artikel</a>
                 </div>
             </div>
             <div class="hidden md:block">
-                <div class="ml-4 flex items-center md:ml-6">
-                    <a href="/login" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
-                    <a href="/register" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Register</a>
+                <div class="ml-4 flex items-center md:ml-6" id="authLinks">
+                    @auth
+                        <span class="text-white mr-4">Hello, {{ Auth::user()->name }}</span>
+                        <form id="logoutForm" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        <a href="#" id="logoutBtn" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Logout</a>
+                    @else
+                    <a href="/login" class="flex items-center text-outline-red-2 justify-center bg-black bg-opacity-50 border-2 border-red-500 rounded-full px-6 -py-2 text-3xl font-extrabold text-gray-300 ">
+                        Masuk
+                    </a>
+                    
+                        {{-- <a href="/login" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Login</a>
+                        <a href="/register" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Register</a> --}}
+                    @endauth
                 </div>
             </div>
+            <!-- Burger Menu -->
             <div class="-mr-2 flex md:hidden">
-                <!-- Mobile menu button -->
-                <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="absolute -inset-0.5"></span>
+                <button type="button" id="burgerMenuBtn" class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                     <span class="sr-only">Open main menu</span>
-                    <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="md:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-            <a href="/" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-                aria-current="page">Dashboard</a>
-            <a href="/jadwal"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Jadwal</a>
-            <a href="/game"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Game</a>
-            <a href="/article"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Article</a>
-        </div>
-        <div class="border-t border-gray-700 pb-3 pt-4">
-            <div class="flex items-center px-5">
-                <div class="shrink-0">
-                    <img class="size-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt="">
-                </div>
-                <div class="ml-3">
-                    <div class="text-base/5 font-medium text-white">Tom Cook</div>
-                    <div class="text-sm font-medium text-gray-400">tom@example.com</div>
-                </div>
-            </div>
+    <!-- Mobile Menu -->
+    <div class="hidden" id="mobileMenu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+            <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-red-700 hover:bg-red-700 hover:text-black">Beranda</a>
+            <a href="/jadwal" class="block rounded-md px-3 py-2 text-base font-medium text-red-700 hover:bg-red-700 hover:text-black">Jadwal</a>
+            <a href="/game" class="block rounded-md px-3 py-2 text-base font-medium text-red-700 hover:bg-red-700 hover:text-black">Game</a>
+            <a href="/article" class="block rounded-md px-3 py-2 text-base font-medium text-red-700 hover:bg-red-700 hover:text-black">Artikel</a>
         </div>
     </div>
 </nav>
+
+<script>
+    const burgerMenuBtn = document.getElementById('burgerMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    // Toggle menu on burger button click
+    burgerMenuBtn?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when resizing to large screens
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+
+    // Handle logout
+    document.getElementById('logoutBtn')?.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('logoutForm').submit();
+    });
+</script>

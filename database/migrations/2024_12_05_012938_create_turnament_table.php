@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('hadiah');
             $table->integer('pemain');
             $table->date('tanggal');
-            $table->integer('biaya');
+            $table->integer('biaya')->default(0); // Nilai default
             $table->string('lokasi');
-            $table->foreignId('game_id')->constrained('game')->onDelete('cascade');
+            $table->foreignId('game_id')->constrained('game')->onDelete('cascade')->index(); // Indeks ditambahkan
             $table->timestamps();
         });
     }

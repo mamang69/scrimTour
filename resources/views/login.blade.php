@@ -9,102 +9,97 @@
     <title>Sign In</title>
 </head>
 
-<body class="h-full">
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                alt="Your Company">
-            <h2 class="mt-10 text-center text-2xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
-        </div>
-
-        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6" action="/api/login" method="POST" id="loginForm">
-                @csrf
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-900">Email address</label>
-                    <div class="mt-2">
-                        <input id="email" name="email" type="email" autocomplete="email" required
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-                    </div>
-                </div>
-
-                <div>
-                    <div class="flex items-center justify-between">
-                        <label for="password" class="block text-sm font-medium text-gray-900">Password</label>
-                        <div class="text-sm">
-                            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">Forgot
-                                password?</a>
+<body class="h-full" style="background-image: url('{{ asset('images/bg_beranda.jpg') }}'); background-size: cover; background-position: center;">
+    <div class="flex min-h-full items-center justify-center px-6 py-12 lg:px-8">
+        <div class="border-4 border-red-600 w-4/5 lg:w-2/5 bg-black bg-opacity-20 p-6 rounded-lg">
+            <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                <h2 class="mt-10 text-center text-2xl font-bold tracking-tight text-white">Masuk</h2>
+            </div>
+    
+            <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                <form class="space-y-6" id="loginForm">
+                    @csrf
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-white">Email</label>
+                        <div class="mt-2">
+                            <input id="email" name="email" type="email" autocomplete="email" required
+                                class="block w-full rounded-md bg-gray-400 bg-opacity-20 border-gray-300 py-1.5 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
                         </div>
                     </div>
-                    <div class="mt-2">
-                        <input id="password" name="password" type="password" autocomplete="current-password" required
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+    
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <label for="password" class="block text-sm font-medium text-white">Password</label>
+                            
+                        </div>
+                        <div class="mt-2">
+                            <input id="password" name="password" type="password" autocomplete="current-password" required
+                                class="block w-full rounded-md bg-gray-400 bg-opacity-20 border-gray-300 py-1.5  text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+                        </div>
                     </div>
+    
+                    <div class="flex justify-center">
+                        <button type="submit"
+                            class="flex w-2/5 justify-center border-2 border-white rounded-md bg-gradient-to-r from-red-500 to-black px-3 py-1.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ">
+                            MASUK
+                        </button>
+                    </div>
+                </form>
+                <div id="responseMessage" class="mt-4 text-center text-sm text-red-600"></div>
+                <p class="mt-10 text-center text-sm text-gray-100">
+                    Belum punya akun ? 
+                </p>
+                <div class="flex justify-center items-center mt-6">
+                    <a href="/register" class="text-center font-bold text-lg text-white ">
+                        DAFTAR
+                    </a>
                 </div>
-
-                <div>
-                    <button type="submit"
-                        class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                        Masuk
-                    </button>
-                </div>
-            </form>
-            <div id="responseMessage" class="mt-4 text-center text-sm text-red-600"></div>
-            <p class="mt-10 text-center text-sm text-gray-500">
-                Belum punya akun ?
-                <a href="/register" class="font-semibold text-indigo-600 hover:text-indigo-500">Buat sekarang</a>
-            </p>
+            </div>
         </div>
+        
     </div>
 
     <script>
         document.getElementById("loginForm").addEventListener("submit", async function (event) {
-    event.preventDefault();
+            event.preventDefault(); // Mencegah form dikirimkan secara default
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
 
-    const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content'); // Ambil CSRF token
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content'); // Ambil CSRF token
 
-    try {
-        const response = await fetch("http://127.0.0.1:8000/api/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "X-CSRF-TOKEN": csrfToken,  // Menambahkan CSRF token di header
-            },
-            body: JSON.stringify({
-                email,
-                password
-            }),
+            try {
+                // Kirim request login ke API
+                const response = await fetch("http://127.0.0.1:8000/api/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": csrfToken, // Menambahkan CSRF token di header
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                // Jika login gagal
+                if (!response.ok) {
+                    const data = await response.json();
+                    document.getElementById("responseMessage").textContent = data.message || "Login gagal.";
+                    return;
+                }
+
+                // Jika login berhasil
+                const data = await response.json();
+                console.log(data); // Debugging log
+
+                // Simpan token ke localStorage
+                localStorage.setItem('auth_token', data.token);
+
+                // Arahkan pengguna ke halaman dashboard
+                window.location.href = "/"; // Ganti dengan URL halaman dashboard Anda
+            } catch (error) {
+                document.getElementById("responseMessage").textContent = "Terjadi kesalahan: " + error.message;
+            }
         });
-
-        // Periksa apakah respons berhasil
-        if (!response.ok) {
-            const data = await response.json();
-            document.getElementById("responseMessage").textContent = data.message || "Login gagal.";
-            return; // Stop eksekusi jika login gagal
-        }
-
-        const data = await response.json();
-        console.log(data); // Debugging log
-
-        // Jika login berhasil
-        document.getElementById("responseMessage").textContent = "Login berhasil!";
-        console.log("Token:", data.token); // Cek token
-
-        // Simpan token ke localStorage atau sessionStorage untuk digunakan di aplikasi lain
-        localStorage.setItem('auth_token', data.token);
-
-        // Arahkan pengguna ke halaman dashboard
-        window.location.href = "/"; // Ganti dengan URL halaman dashboard Anda
-    } catch (error) {
-        document.getElementById("responseMessage").textContent = "Terjadi kesalahan: " + error.message;
-    }
-});
-
-
-    </script>    
+    </script>
 </body>
 
 </html>
