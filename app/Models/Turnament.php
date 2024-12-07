@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Turnament extends Model
 {
     use HasFactory;
-
+    protected $table = 'turnament';
     protected $fillable = ['nama', 'hadiah', 'pemain', 'tanggal', 'biaya', 'lokasi', 'game_id'];
 
     public function game()
