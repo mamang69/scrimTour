@@ -1,19 +1,19 @@
-<nav class="{{ request()->is('/') ? 'bg-black bg-opacity-50 fixed top-0 left-0 w-full z-10' : 'bg-black bg-opacity-50 border-b-2 border-red-700 fixed top-0 left-0 w-full z-10' }}">
+<nav class="{{ request()->is('/') ? 'bg-black bg-opacity-50 fixed top-0 left-0 w-full z-10' : 'bg-black bg-opacity-50 border-b-2 border-blue-1 fixed top-0 left-0 w-full z-10' }}">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
             <div class="flex items-center">
                 <div class="shrink-0">
                     <h1 class="text-3xl font-bold">
-                        <span class="text-red-700">Scrim</span><span class="text-white">Tour</span>
+                        <span class="blue-1">Scrim</span><span class="text-white">Tour</span>
                     </h1>
                 </div>
             </div>
             <div class="hidden md:block ml-auto">
                 <div class="ml-10 flex items-baseline space-x-4">
-                    <a href="/" class="rounded-md px-3 py-2 text-xl font-extrabold text-red-700 hover:bg-red-700 hover:text-black">Beranda</a>
-                    <a href="/jadwal" class="rounded-md px-3 py-2 text-xl font-extrabold text-red-700 hover:bg-red-700 hover:text-black">Jadwal</a>
-                    <a href="/game" class="rounded-md px-3 py-2 text-xl font-extrabold text-red-700 hover:bg-red-700 hover:text-black">Game</a>
-                    <a href="/article" class="rounded-md px-3 py-2 text-xl font-extrabold text-red-700 hover:bg-red-700 hover:text-black">Artikel</a>
+                    <a href="/" class="rounded-md px-3 py-2 text-xl font-extrabold blue-1 hover:bg-blue-1 hover:text-black">Beranda</a>
+                    <a href="/jadwal" class="rounded-md px-3 py-2 text-xl font-extrabold blue-1 hover:bg-blue-1 hover:text-black">Jadwal</a>
+                    <a href="/game" class="rounded-md px-3 py-2 text-xl font-extrabold blue-1 hover:bg-blue-1 hover:text-black">Game</a>
+                    <a href="/article" class="rounded-md px-3 py-2 text-xl font-extrabold blue-1 hover:bg-blue-1 hover:text-black">Artikel</a>
                 </div>
             </div>
             <div class="hidden md:block">
@@ -25,7 +25,7 @@
                         </form>
                         <a href="#" id="logoutBtn" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Logout</a>
                     @else
-                    <a href="/login" class="flex items-center text-outline-red-2 justify-center bg-black bg-opacity-50 border-2 border-red-500 rounded-full px-6 -py-2 text-3xl font-extrabold text-gray-300 ">
+                    <a href="/login" class="flex items-center text-outline-blue justify-center bg-black bg-opacity-50 border-2 border-blue-1 rounded-full px-6 -py-2 text-3xl font-extrabold text-gray-300 ">
                         Masuk
                     </a>
                     
@@ -49,10 +49,10 @@
     <!-- Mobile Menu -->
     <div class="hidden" id="mobileMenu">
         <div class="space-y-1 px-2 pb-3 pt-2">
-            <a href="/" class="block rounded-md px-3 py-2 text-base font-medium text-red-700 hover:bg-red-700 hover:text-black">Beranda</a>
-            <a href="/jadwal" class="block rounded-md px-3 py-2 text-base font-medium text-red-700 hover:bg-red-700 hover:text-black">Jadwal</a>
-            <a href="/game" class="block rounded-md px-3 py-2 text-base font-medium text-red-700 hover:bg-red-700 hover:text-black">Game</a>
-            <a href="/article" class="block rounded-md px-3 py-2 text-base font-medium text-red-700 hover:bg-red-700 hover:text-black">Artikel</a>
+            <a href="/" class="block rounded-md px-3 py-2 text-base font-medium blue-1 hover:bg-red-700 hover:text-black">Beranda</a>
+            <a href="/jadwal" class="block rounded-md px-3 py-2 text-base font-medium blue-1 hover:bg-red-700 hover:text-black">Jadwal</a>
+            <a href="/game" class="block rounded-md px-3 py-2 text-base font-medium blue-1 hover:bg-red-700 hover:text-black">Game</a>
+            <a href="/article" class="block rounded-md px-3 py-2 text-base font-medium blue-1 hover:bg-red-700 hover:text-black">Artikel</a>
         </div>
     </div>
 </nav>
@@ -76,6 +76,7 @@
     // Handle logout
     document.getElementById('logoutBtn')?.addEventListener('click', function (event) {
         event.preventDefault();
+        localStorage.removeItem('auth_token');
         document.getElementById('logoutForm').submit();
     });
 </script>

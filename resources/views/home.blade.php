@@ -6,13 +6,13 @@
     <main>
         <div class="h-104 pt-16" style="background-image: url('{{ asset('images/bg_beranda.jpg') }}'); background-size: cover; background-position: center;">
             <h1 class="mx-auto px-4 py-6 sm:px-6 lg:px-">
-                <span class="text-white text-6xl font-bold">KABAR </span>
-                <span class="text-outline-red text-6xl font-bold">GAMERS</span>
+                <span class="blue-1 text-6xl font-bold">KABAR </span>
+                <span class="text-outline-blue text-6xl font-bold">GAMERS</span>
             </h1>
         </div>
         
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <div class="bg-gray-100">
+            <div class="">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     
                     <div id="carousel-example" class="relative w-full" data-carousel="slide">
@@ -71,7 +71,7 @@
 
 
                     <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-                        <h2 class="text-2xl font-bold text-gray-900">Jadwal Tournament</h2>
+                        <h2 class="text-2xl font-bold text-white">Jadwal Tournament</h2>
 
 
                         <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">

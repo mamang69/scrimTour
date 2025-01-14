@@ -1,4 +1,4 @@
-<footer class="bg-red-700 text-black py-8">
+<footer class="bg-blue-1 text-black py-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Baris pertama: Jadwal Game Article -->
       <div class="text-center">
