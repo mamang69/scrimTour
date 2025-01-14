@@ -20,6 +20,9 @@ module.exports = {
                 xl: "5rem", // Padding khusus untuk layar ekstra besar
             },
         },
+        // colors:{
+        //     "blue-1":"rgba(202, 244, 255, 1)",
+        // }
     },
     plugins: [
         require("@tailwindcss/forms"), // Tambahkan plugin ini

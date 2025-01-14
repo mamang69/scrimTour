@@ -10,7 +10,7 @@
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h3 class="text-white"><span><a href="/">Beranda</a></span> > <span><a href="/article"> Artikel </a></span> > {{$article->judul}}</h3>
                     <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-10">
-                        <h2 class="text-2xl font-bold text-red-700">Detail Artikel</h2>
+                        <h2 class="text-2xl font-bold blue-1">Detail Artikel</h2>
                         <div class="group relative">
                             <!-- Menampilkan judul artikel dinamis -->
                             <h1 class="mt-4 text-2xl font-bold text-white line-clamp-2">
